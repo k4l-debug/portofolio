@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — M. Haikal Albeni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0d1b2a;
+            color: #e0e6ed;
+        }
+
+        /* === FULL PAGE ANIMATION BACKGROUND === */
+        #nnCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.22;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+        }
+
+        nav a {
+            margin-left: 26px;
+            text-decoration: none;
+            color: #e0e6ed;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #84caff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            padding: 160px 0 130px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: 20px auto;
+            opacity: 0.85;
+        }
+
+        section {
+            margin-top: 120px;
+            padding: 60px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 20px;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .skill-item {
+            padding: 18px;
+            border-radius: 14px;
+            text-align: center;
+            background: rgba(255,255,255,0.08);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .skill-item:hover {
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-6px);
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 26px;
+        }
+
+        .project-card {
+            padding: 22px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            background: rgba(255,255,255,0.16);
+            transform: translateY(-8px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔥 FULL PAGE ANIMATION CANVAS -->
+<canvas id="nnCanvas"></canvas>
+
+<!-- NAV -->
+<div class="container">
+    <nav>
+        <h2 style="margin:0;">M. Haikal Albeni</h2>
+        <div>
+            <a href="#tentang">Tentang</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+    </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Data Engineer & Data Science Enthusiast</h1>
+        <p>Mahasiswa Statistika dengan minat pada analisis data, machine learning, dan automasi berbasis Python.</p>
+    </div>
+</section>
+
+<!-- TENTANG -->
+<div class="container">
+    <section id="tentang">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya memiliki ketertarikan kuat pada Data Engineering dan Data Science. Berpengalaman dalam analisis data,
+            pemodelan statistik, time series, machine learning, hingga web automation menggunakan Selenium.
+        </p>
+    </section>
+</div>
+
+<!-- SKILLS -->
+<div class="container">
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">Machine Learning</div>
+            <div class="skill-item">Data Visualization</div>
+            <div class="skill-item">Selenium Automation</div>
+            <div class="skill-item">ETL Pipeline</div>
+        </div>
+    </section>
+</div>
+
+<!-- PROJECTS -->
+<div class="container">
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Forecasting Time Series</h3>
+                <p>Peramalan data menggunakan ARIMA, Prophet, dan LSTM.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Web Automation</h3>
+                <p>Scraping dan otomatisasi form menggunakan Python Selenium.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Machine Learning Classification</h3>
+                <p>Membangun model ML untuk klasifikasi data dengan akurasi tinggi.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- KONTAK -->
+<div class="container">
+    <section id="kontak">
+        <h2>Kontak</h2>
+        <p>Email: haikalalbeni@gmail.com<br>
+        LinkedIn: linkedin.com/in/haikalalbeni<br>
+        GitHub: github.com/haikalalbeni </p>
+    </section>
+</div>
+
+<footer>
+    © 2025 M. Haikal Albeni — Portfolio
+</footer>
+
+<script>
+/* =======================
+   FULL PAGE ANIMATION
+   ======================= */
+
+const canvas = document.getElementById("nnCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let nodes = [];
+const NODE_COUNT = 90;
+
+for (let i = 0; i < NODE_COUNT; i++) {
+    nodes.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6
+    });
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    nodes.forEach(node => {
+        node.x += node.vx;
+        node.y += node.vy;
+
+        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(120,180,255,0.9)";
+        ctx.fill();
+    });
+
+    for (let i = 0; i < NODE_COUNT; i++) {
+        for (let j = i + 1; j < NODE_COUNT; j++) {
+            let dx = nodes[i].x - nodes[j].x;
+            let dy = nodes[i].y - nodes[j].y;
+            let dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 180) {
+                ctx.beginPath();
+                ctx.moveTo(nodes[i].x, nodes[i].y);
+                ctx.lineTo(nodes[j].x, nodes[j].y);
+                ctx.strokeStyle = "rgba(120,180,255," + (1 - dist / 180) + ")";
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
